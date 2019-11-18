@@ -7,7 +7,7 @@ eureka:
     leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: https://eureka-server-v1.cfapps.io/eureka
     healthcheck:
       enabled: true
     lease:
