@@ -17,6 +17,15 @@ public class SchoolServiceController {
 	 @Autowired
 	 StudentServiceDelegate studentServiceDelegate;
 	 
+	  @RequestMapping(value = "/ping", method = RequestMethod.GET)
+	    public String ping() 
+	    {
+	        System.out.println("Ping!!!!!");
+	        return "<html><table><tr><td><b>SUCCESS!!!!!</b></td></tr></table></html>"; 
+
+	    }
+	 
+	 
     @RequestMapping(value = "/getSchoolDetails/{schoolname}", method = RequestMethod.GET)
     public String getStudents(@PathVariable String schoolname) 
     {
@@ -32,6 +41,7 @@ public class SchoolServiceController {
         return studentServiceDelegate.callStudentServiceAndGetDataWithLoadBalace(schoolname); 
 
     }
- 
+    
+  
     
 }
